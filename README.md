@@ -1,4 +1,4 @@
-# Github Profile Visualizer App
+# Modern eCommerce  with Shopify, Next.js and Tailwind
 
 Headless Shopify Storefront with Next.js + Tailwind.
 
