@@ -1,12 +1,11 @@
-import Head from 'next/head'
 import { getProductsInCollections } from '../lib/shopify'
+import ProductList from '../components/ProductList'
 
 export default function Home({products}) {
-  console.log(products)
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <h1>hello</h1>
+    <div className="">
+      <ProductList products={products} />
     </div>
   )
 }
