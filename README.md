@@ -1,4 +1,19 @@
-# Next.js + Tailwind CSS Example
+# Github Profile Visualizer App
+
+Headless Shopify Storefront with Next.js + Tailwind.
+
+![demo]()
+
+## Built with:
+
+- [Shopify](https://www.shopify.com/)
+- [Create React App](https://github.com/facebook/create-react-app)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/home?utm_source=next-site&utm_medium=banner&utm_campaign=next-website)
+- [Next.js](https://nextjs.org/)
+- [GraphQL](https://graphql.org/)
+
+## Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
