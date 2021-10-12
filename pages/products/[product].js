@@ -1,9 +1,9 @@
 import { getProducts, getProduct } from "../../lib/shopify"
-import ProductOverview from "../../components/ProductOverview"
+import ProductPageContent from "../../components/ProductPageContent"
 
 export default function ProductPage({ product }) {
     return (
-        <ProductOverview product={product} />
+        <ProductPageContent product={product} />
     )
   }
   
@@ -11,7 +11,7 @@ export default function ProductPage({ product }) {
   export async function getStaticPaths() {
     // Call an external API endpoint to get posts
     const products = await getProducts();
-    
+
     if (!products) {
         return {
           notFound: true,

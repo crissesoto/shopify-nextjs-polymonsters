@@ -1,29 +1,34 @@
-import Image from 'next/image';
-import { formatter } from '../utils/helpers';
+import Link from 'next/link'
+import Image from 'next/image'
+import { formatter } from '../utils/helpers'
 
-function ProductCard({node}) {
-    const {id, images, title, handle, priceRange } = node;
-    const image = images.edges[0].node;
-    const price = priceRange.minVariantPrice.amount;
+const ProductCard = ({ product }) => {
+  const { id, title } = product.node
 
-    return (
-        <div className="group relative" id={id}>
-            <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-            <img src={image.originalSrc} alt={image.altText} style={{height: "-webkit-fill-available"}} />
-            </div>
-            <div className="mt-4 flex justify-between">
-            <div>
-                <h3 className="text-sm text-gray-900">
-                <a href={`/products/${id}`}>
-                    <span aria-hidden="true" className="absolute inset-0"></span>
-                    {title}
-                </a>
-                </h3>
-            </div>
-            <p className="text-sm font-medium text-gray-700">{formatter.format(price)}</p>
-            </div>
+  const { altText, originalSrc } = product.node.images.edges[0].node
+
+  const price = product.node.priceRange.minVariantPrice.amount
+
+  return (
+    <Link
+      href={`/products/${id}`}
+    >
+      <a className="group">
+        <div className="w-full bg-gray-200 rounded-3xl overflow-hidden">
+          <div className="relative group-hover:opacity-75 h-72">
+            <Image 
+              src={originalSrc}
+              alt={altText}
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
         </div>
-    )
+        <h3 className="mt-4 text-lg font-medium text-gray-900">{title}</h3>
+        <p className="mt-1 text-sm text-gray-700">{formatter.format(price)}</p>
+      </a>
+    </Link>
+  )
 }
 
 export default ProductCard
