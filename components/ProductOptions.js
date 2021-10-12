@@ -8,7 +8,7 @@ export default function ProductOptions({ name, values, selectedOptions, setOptio
         {
           values.map(value => {
             const id = `option-${name}-${value}`
-            const checked = selectedOptions[name] === value
+            const checked = selectedOptions[name] === value 
 
             return (
               <label key={id} htmlFor={id}>

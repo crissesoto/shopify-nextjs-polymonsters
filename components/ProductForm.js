@@ -3,7 +3,9 @@ import { formatter } from '../utils/helpers'
 import ProductOptions from "./ProductOptions"
 
 export default function ProductForm({ product }) {
+  console.log(product)
 
+  // each possible product varient for given product
   const allVariantOptions = product.variants.edges?.map(variant => {
     const allOptions = {}
 
@@ -28,7 +30,9 @@ export default function ProductForm({ product }) {
     defaultValues[item.name] = item.values[0]
   })
 
+  // selected product formatted as allOptions object 
   const [selectedVariant, setSelectedVariant] = useState(allVariantOptions[0])
+  // selected default values for the given product
   const [selectedOptions, setSelectedOptions] = useState(defaultValues)
 
   function setOptions(name, value) {
@@ -39,19 +43,21 @@ export default function ProductForm({ product }) {
 
 
   return (
-    <div className="rounded-2xl p-4 shadow-lg flex flex-col w-full md:w-1/3">
+    <div className="rounded-2xl p-4 shadow-lg flex flex-col w-full lg:w-1/3">
       <h2 className="text-2xl font-bold">{product.title}</h2>
       <span className="pb-6">{formatter.format(product.variants.edges[0].node.priceV2.amount)}</span>
       {
-        product.options.map(({ name, values}) => (
-          <ProductOptions 
+        product.options.map(({ name, values}) => {
+          return (
+            <ProductOptions 
             key={`key-${name}`}
             name={name}
             values={values}
             selectedOptions={selectedOptions}
             setOptions={setOptions}
-          />
-        ))
+            />
+          )
+        })
       }
       <button className="bg-black rounded-lg text-white px-2 py-3 hover:bg-gray-800">Add To Card</button>
     </div>
