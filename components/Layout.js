@@ -1,8 +1,15 @@
 import React from 'react'
-
+import Navbar
+ from './Navbar'
 function Layout({children}) {
     return (
-        <div>{children}</div>
+        <div className="flex flex-col justify-between min-h-screen">
+            <Navbar />
+            <main>
+                {children}
+            </main>
+            <footer>Footer</footer>
+        </div>
     )
 }
 

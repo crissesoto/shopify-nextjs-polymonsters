@@ -11,7 +11,7 @@ export default function ProductPage({ product }) {
   export async function getStaticPaths() {
     // Call an external API endpoint to get posts
     const products = await getProducts();
-    console.log(products)
+    
     if (!products) {
         return {
           notFound: true,
