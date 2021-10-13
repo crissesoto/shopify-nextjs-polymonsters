@@ -55,7 +55,7 @@ export default function ShopProvider({ children }) {
   }
 
   async function removeCartItem(itemToRemove) {
-    console.log(itemToRemove)
+    
     let updatedCart = [];
 
     if (itemToRemove.variantQuantity > 1) {
