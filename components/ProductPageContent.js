@@ -2,6 +2,7 @@ import Image from 'next/image'
 import ProductForm from './ProductForm'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
+import RecommendedProducts from './RecommendedProducts';
 
 export default function ProductPageContent({ product }) {
   const images = [];
@@ -34,6 +35,8 @@ export default function ProductPageContent({ product }) {
         </div>
         <ProductForm product={product} />
       </div>
+        <p className="pt-16 space-y-8 md:space-x-4 lg:space-x-8 max-w-3xl w-11/12 mx-auto">{product.description}</p>
+        <RecommendedProducts current={product.id} products={product.collections.edges[0].node.products.edges}  />
     </div>
   )
 }

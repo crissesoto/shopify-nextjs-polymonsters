@@ -1,6 +1,7 @@
 import React from 'react'
-import Navbar
- from './Navbar'
+import Navbar from './Navbar'
+import Footer from './Footer'
+
 function Layout({children}) {
     return (
         <div className="flex flex-col justify-between min-h-screen">
@@ -8,7 +9,7 @@ function Layout({children}) {
             <main>
                 {children}
             </main>
-            <footer>Footer</footer>
+            <Footer/>
         </div>
     )
 }
