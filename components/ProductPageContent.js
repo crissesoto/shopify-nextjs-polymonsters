@@ -2,6 +2,7 @@ import Image from 'next/image'
 import ProductForm from './ProductForm'
 
 export default function ProductPageContent({ product }) {
+  console.log(product)
 
   return (
     <div className="min-h-screen py-12 sm:pt-20">

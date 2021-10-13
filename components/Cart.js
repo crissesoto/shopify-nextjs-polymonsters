@@ -5,6 +5,7 @@ import { XIcon } from '@heroicons/react/outline'
 import { CartContext } from '../context/shopContext'
 import Image from 'next/image'
 import { formatter } from '../utils/helpers'
+import Link from 'next/link'
 
 export default function Cart() {
     const cancelButtonRef = useRef();
@@ -77,7 +78,9 @@ export default function Cart() {
                                     <div>
                                     <div className="flex justify-between text-base font-medium text-gray-900">
                                         <h3>
-                                        <a href={`/products/${product.id}`}>{product.title}</a>
+                                        <Link href={`/products/${product.handle}`} passHref>
+                                            <a>{product.title}</a>
+                                        </Link>
                                         </h3>
                                         <p className="ml-4">{formatter.format(product.variantPrice)}</p>
                                     </div>

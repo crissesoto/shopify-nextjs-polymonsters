@@ -20,10 +20,10 @@ export default function ProductPage({ product }) {
   
     // Get the paths we want to pre-render based on posts
     const paths = products.map((product) => {
-        const id = String(product.node.id);
+        const handle = String(product.node.handle);
 
         return {
-            params: {product: id}
+            params: {product: handle}
         }
     })
     // We'll pre-render only these paths at build time.

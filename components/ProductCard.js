@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { formatter } from '../utils/helpers'
 
 const ProductCard = ({ product }) => {
-  const { id, title } = product.node
+  const { title, handle } = product.node
 
   const { altText, originalSrc } = product.node.images.edges[0].node
 
@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <Link
-      href={`/products/${id}`}
+      href={`/products/${handle}`}
     >
       <a className="group">
         <div className="w-full bg-gray-200 rounded-3xl overflow-hidden">
