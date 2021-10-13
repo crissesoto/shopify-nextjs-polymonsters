@@ -2,7 +2,7 @@
 
 This is a production ready Headless Shopify storefrontModern focusing on Shopify, Next.js, TailwindCSS, GraphQL. Additional topics include Storefront API, Static Site Generation, getStaticPaths, getStaticProps and more.
 
-![demo](https://raw.githubusercontent.com/crissesoto/spotishopify-nextjs-polymonstersfyme/main/public/public/og.png)
+![demo](https://raw.githubusercontent.com/crissesoto/shopify-nextjs-polymonsters/main/public/og.png)
 
 ## Built with:
 
