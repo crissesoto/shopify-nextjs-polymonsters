@@ -1,8 +1,8 @@
 # Modern eCommerce  with Shopify, Next.js and Tailwind
 
-Headless Shopify Storefront with Next.js + Tailwind.
+This is a production ready Headless Shopify storefrontModern focusing on Shopify, Next.js, TailwindCSS, GraphQL. Additional topics include Storefront API, Static Site Generation, getStaticPaths, getStaticProps and more.
 
-![demo]()
+![demo](https://raw.githubusercontent.com/crissesoto/spotishopify-nextjs-polymonstersfyme/main/public/public/og.png)
 
 ## Built with:
 
@@ -21,9 +21,7 @@ It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-
 
 ## Preview
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+Preview the example live on [Polymonters](https://shopify-nextjs-polymonsters.vercel.app/)
 
 ## Deploy your own
 
