@@ -1,7 +1,4 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import Link from "next/link"
 
 
 export default function Hero() {
@@ -18,12 +15,12 @@ export default function Hero() {
               The latest addition to the Armonica Collection is also the most versatile: it comes with the Beveled Chain and can be worn as a belt bag, sling, or shoulder bag.
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <a
-                href="#"
-                className="w-full pr-8 py-3 text-base font-small text-black underline md:py-4 md:text-lg md:pr-10"
-                >
-                SHOP MINI ARMONICA
-                </a>
+                <Link href="/products/mini-maestra" passHref>
+                  <a className="w-full pr-8 py-3 text-base font-small text-black underline md:py-4 md:text-lg md:pr-10"
+                  >
+                  SHOP MINI MAESTRA
+                  </a>
+                </Link>
               </div>
             </div>
           </main>
